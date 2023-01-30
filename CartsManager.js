@@ -47,7 +47,7 @@ class CartsManager{
             }else{
             cartProducts.push(newProduct);
         }
-        let obj = {"id":cid,"products":cartProducts}
+        let obj = {"id":Math.floor(cid),"products":cartProducts}
         carritos.splice(pos,1,obj)
         await fs.promises.writeFile(this.carts, JSON.stringify(carritos))
     
