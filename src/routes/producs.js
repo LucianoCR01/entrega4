@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const userRouterProd = Router()
 
-const ProducManager = require("C:/Users/Luciano/Desktop/Entrega3-master/ProductManager.js")
+const ProducManager = require("../../ProductManager")
 const manager = new ProducManager("products.json")
 
 userRouterProd.get("/", async (req, res) =>{
